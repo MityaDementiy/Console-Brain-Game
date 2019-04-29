@@ -1,13 +1,19 @@
 {
-  "name": "project-lvl1-s486",
+  "name": "console-brain-game",
   "version": "1.0.0",
   "description": "This is The Brain Games project.",
   "main": "index.js",
   "bin": {
-    "TheBrainGames": "src/bin/brain-games.js"
+    "TheBrainGames": "src/bin/brain-games.js",
+    "console-brain-game": "dist/bin/brain-games.js"
   },
+  "files": [
+    "dist"
+],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -31,5 +37,6 @@
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "make": "^0.8.1"
-  }
+  },
+  "devDependencies": {}
 }
