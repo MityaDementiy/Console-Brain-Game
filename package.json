@@ -1,6 +1,6 @@
 {
   "name": "console-brain-game",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "This is The Brain Games project.",
   "main": "index.js",
   "bin": {
