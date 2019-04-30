@@ -1,8 +1,8 @@
 {
   "name": "console-brain-game",
-  "version": "1.0.8",
+  "version": "1.1.0",
   "description": "This is The Brain Games project.",
-  "main": "index.js",
+  "main": "dist/index.js",
   "bin": {
     "console-brain-game": "dist/bin/brain-games.js"
   },
@@ -36,7 +36,8 @@
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "make": "^0.8.1",
-    "npmignore": "^0.2.0"
+    "npmignore": "^0.2.0",
+    "readline-sync": "^1.4.9"
   },
   "devDependencies": {
     "cross-env": "^5.2.0"
