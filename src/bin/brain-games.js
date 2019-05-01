@@ -1,11 +1,5 @@
 #!/usr/bin/env node
 
-import sayHi from "../index";
+import sayHi from '../index';
+
 sayHi();
-
-
-
-
-
-
-
