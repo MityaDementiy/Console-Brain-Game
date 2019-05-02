@@ -6,4 +6,6 @@
 
 [![Build Status](https://travis-ci.org/MityaDementiy/project-lvl1-s486.svg?branch=master)](https://travis-ci.org/MityaDementiy/project-lvl1-s486)
 
-This is The Brain Games project by Hexlet and Dmitriy Dementiy/Это проект Brain Games, который я выполняю под крылом Hexlet.
+This is The Brain Games project by Dmitriy Dementiy and Hexlet/Это проект Brain Games, который я выполняю под крылом Hexlet.
+
+![animated demo](https://github.com/MityaDementiy/project-lvl1-s486/blob/master/demo1.gif)
