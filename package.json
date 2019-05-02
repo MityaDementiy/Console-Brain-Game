@@ -1,11 +1,11 @@
 {
   "name": "console-brain-game",
-  "version": "1.2.0",
+  "version": "1.2.3",
   "description": "This is The Brain Games project.",
   "main": "dist/index.js",
   "bin": {
     "console-brain-game": "dist/bin/brain-games.js",
-    "brain-even": "dist/bin/brain-even.js"
+    "brain-even": "dist/bin/braineven.js"
   },
   "files": [
     "dist"
