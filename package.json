@@ -6,7 +6,7 @@
   "bin": {
     "console-brain-game": "dist/bin/brain-games.js",
     "brain-even": "dist/bin/braineven.js",
-    "brain-calc": "dist/bin/brain-calc.js"
+    "brain-calc": "dist/bin/braincalc.js"
   },
   "files": [
     "dist"
