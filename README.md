@@ -8,4 +8,4 @@
 
 This is The Brain Games project by Dmitriy Dementiy and Hexlet/Это проект Brain Games, который я выполняю под крылом Hexlet.
 
-[![asciicast](https://asciinema.org/a/tXE3i5HLFRLH81VVUnI1jdCRJ.svg)](https://asciinema.org/a/tXE3i5HLFRLH81VVUnI1jdCRJ)
+[![asciicast](https://asciinema.org/a/siTP6A8XSO8yLEQq1gPrdvvqd.svg)](https://asciinema.org/a/siTP6A8XSO8yLEQq1gPrdvvqd)
