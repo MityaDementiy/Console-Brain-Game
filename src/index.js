@@ -1,5 +1,3 @@
-import readlineSync from 'readline-sync';
-
 const sayHi = () => {
   console.log('Welcome to the Brain Games!');
   console.log('Type \'brain-even\' to play Brain Even game.');
