@@ -8,7 +8,7 @@ even:
 	npx babel-node -- src/bin/braineven.js
 
 calc: 
-    npx babel-node -- src/bin/braincalc.js
+	npx babel-node -- src/bin/braincalc.js
 	
 publish: 
 	npm publish
