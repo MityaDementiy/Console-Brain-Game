@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
-import calculate from '../calculator';
+import calculate from '../games/calculator';
+import playRound from '../index';
 
-calculate();
+playRound(calculate);

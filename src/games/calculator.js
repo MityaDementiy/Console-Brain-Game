@@ -1,14 +1,7 @@
-import readlineSync from 'readline-sync';
-
 console.log('Welcome to the Brain Games!');
 console.log('What is the result of the expression?');
-const getName = readlineSync.question('May I have your name? ');
-console.log(`Hello, ${getName}!`);
-let correctAnswersCounter = 0;
+
 const calculate = () => {
-  if (correctAnswersCounter === 3) {
-    return console.log(`Congratulations, ${getName}!`);
-  }
   const getRandom = () => Math.round(Math.random() * (100 - 1) + 1);
   const getRandomForMathAction = () => Math.round(Math.random() * (3 - 1) + 1);
   const firstRandomNum = getRandom();
@@ -25,9 +18,6 @@ const calculate = () => {
     mathSymbol = '*';
   }
 
-  console.log(`Question: ${firstRandomNum} ${mathSymbol} ${secondRandomNum}`);
-  const answer = readlineSync.question('Your answer: ');
-
   let correctAnswer;
 
   if (numOfMathAction === 1) {
@@ -37,15 +27,8 @@ const calculate = () => {
   } else if (numOfMathAction === 3) {
     correctAnswer = firstRandomNum * secondRandomNum;
   }
-
-  if (answer !== correctAnswer.toString()) {
-    // eslint-disable-next-line no-useless-escape
-    console.log(`\'${answer}\' is wrong answer ;(. Correct answer was \'${correctAnswer}\'`);
-    // eslint-disable-next-line no-useless-escape
-    return console.log(`Let\'s try again, ${getName}!`);
-  }
-  console.log('Correct!');
-  correctAnswersCounter += 1;
-  return calculate();
+  const question = `${firstRandomNum} ${mathSymbol} ${secondRandomNum}`;
+  const gameData = [question, correctAnswer.toString()];
+  return gameData;
 };
 export default calculate;
