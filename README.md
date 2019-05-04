@@ -8,4 +8,10 @@
 
 This is The Brain Games project by Dmitriy Dementiy and Hexlet/Это проект Brain Games, который я выполняю под крылом Hexlet.
 
+This is Brain even set up and play demo:
+
 [![asciicast](https://asciinema.org/a/siTP6A8XSO8yLEQq1gPrdvvqd.svg)](https://asciinema.org/a/siTP6A8XSO8yLEQq1gPrdvvqd)
+
+This is Brain calc set up and play demo:
+
+[![asciicast](https://asciinema.org/a/ejqVPMn85Sm9XmMp7HBh6axrK.svg)](https://asciinema.org/a/ejqVPMn85Sm9XmMp7HBh6axrK)
