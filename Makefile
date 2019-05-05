@@ -9,6 +9,9 @@ even:
 
 calc: 
 	npx babel-node -- src/bin/braincalc.js
+
+gsd:
+    npx babel-node -- src/bin/braingsd.js
 	
 publish: 
 	npm publish

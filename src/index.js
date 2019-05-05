@@ -6,7 +6,8 @@ console.log(`Hello, ${getName}!`);
 
 const playRound = (func) => {
   if (correctAnswersCounter === 3) {
-    return console.log(`Congratulations, ${getName}, you passed this round!`);
+    console.log(`Congratulations, ${getName}, you passed this round!`);
+    return;
   }
   const gameInfo = func();
   const question = gameInfo[0];
@@ -17,10 +18,11 @@ const playRound = (func) => {
     // eslint-disable-next-line no-useless-escape
     console.log(`\'${answer}\' is wrong answer ;(. Correct answer was \'${correctAnswer}\'`);
     // eslint-disable-next-line no-useless-escape
-    return console.log(`Let\'s try again, ${getName}!`);
+    console.log(`Let\'s try again, ${getName}!`);
+    return;
   }
   console.log('Correct!');
   correctAnswersCounter += 1;
-  return playRound(func);
+  playRound(func);
 };
 export default playRound;
