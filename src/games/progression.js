@@ -25,7 +25,12 @@ const findMissedNum = () => {
   const tenthNum = progression[9];
   const question = `${firstNum} ${secondNum} ${thirdNum} ${fourthNum} ${fifthNum} ${sixthNum} ${seventhNum} ${eightNum} ${ninethNum} ${tenthNum}`;
   const beforeMissedNum = progression[substituteInProgression - 1];
-  const correctAnswer = beforeMissedNum + 2;
+  const afterMissedNum = progression[substituteInProgression + 1];
+  let correctAnswer;
+  if (substituteInProgression === 1) {
+    correctAnswer = afterMissedNum - 2;
+  }
+  correctAnswer = beforeMissedNum + 2;
   const gameData = [question, correctAnswer.toString()];
   return gameData;
 };
