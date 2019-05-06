@@ -23,3 +23,7 @@ This is Brain gsd set up and play demo:
 This is Brain progression set up and play demo: 
 
 [![asciicast](https://asciinema.org/a/juEWNNGsBAEBO8vmSxYiocs5A.svg)](https://asciinema.org/a/juEWNNGsBAEBO8vmSxYiocs5A)
+
+This is Brain prime set up and play demo: 
+
+[![asciicast](https://asciinema.org/a/wEfL2J5jYzTkiFmV2zrGSfDQd.svg)](https://asciinema.org/a/wEfL2J5jYzTkiFmV2zrGSfDQd)
