@@ -12,6 +12,9 @@ calc:
 
 gsd:
     npx babel-node -- src/bin/braingsd.js
+
+progression:
+    npx babel-node -- src/bin/brainprogression.js
 	
 publish: 
 	npm publish
