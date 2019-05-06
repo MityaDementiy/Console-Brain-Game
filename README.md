@@ -19,3 +19,7 @@ This is Brain calc set up and play demo:
 This is Brain gsd set up and play demo:
 
 [![asciicast](https://asciinema.org/a/Pll8Ap4xXonXODn5e5cj2ltuK.svg)](https://asciinema.org/a/Pll8Ap4xXonXODn5e5cj2ltuK)
+
+This is Brain progression set up and play demo: 
+
+[![asciicast](https://asciinema.org/a/juEWNNGsBAEBO8vmSxYiocs5A.svg)](https://asciinema.org/a/juEWNNGsBAEBO8vmSxYiocs5A)
