@@ -1,6 +1,6 @@
 {
   "name": "console-brain-game",
-  "version": "1.5.1",
+  "version": "1.6.0",
   "description": "This is The Brain Games project.",
   "main": "dist/index.js",
   "bin": {
@@ -8,7 +8,8 @@
     "brain-even": "dist/bin/braineven.js",
     "brain-calc": "dist/bin/braincalc.js",
     "brain-gsd": "dist/bin/braingsd.js",
-    "brain-progression": "dist/bin/brainprogression.js"
+    "brain-progression": "dist/bin/brainprogression.js",
+    "brain-prime": "dist/bin/brainprime.js"
   },
   "files": [
     "dist"

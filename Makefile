@@ -15,6 +15,9 @@ gsd:
 
 progression:
     npx babel-node -- src/bin/brainprogression.js
+
+prime:
+    npx babel-node -- src/bin/brainprime.js
 	
 publish: 
 	npm publish
