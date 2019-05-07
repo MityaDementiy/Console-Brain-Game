@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
 import findGsd from '../games/gsd';
-import playRound from '../index';
+import playRound from '..';
 
 playRound(findGsd);

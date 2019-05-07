@@ -2,7 +2,6 @@
   "name": "console-brain-game",
   "version": "1.6.2",
   "description": "This is The Brain Games project.",
-  "main": "dist/index.js",
   "bin": {
     "console-brain-game": "dist/bin/brain-games.js",
     "brain-even": "dist/bin/braineven.js",
@@ -24,9 +23,8 @@
     "url": "git+https://github.com/MityaDementiy/project-lvl1-s486.git"
   },
   "keywords": [
-    "The",
-    "Brain",
-    "Games"
+    "Brain Games",
+    "Console Games"
   ],
   "author": "Dmitriy Dementiy",
   "license": "ISC",
@@ -35,15 +33,6 @@
   },
   "homepage": "https://github.com/MityaDementiy/project-lvl1-s486#readme",
   "dependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.16.0",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-babel": "^5.3.0",
-    "eslint-plugin-import": "^2.17.2",
-    "make": "^0.8.1",
-    "npmignore": "^0.2.0",
     "readline-sync": "^1.4.9"
   },
   "devDependencies": {
@@ -51,6 +40,15 @@
     "@babel/core": "^7.4.4",
     "@babel/node": "^7.2.2",
     "@babel/preset-env": "^7.4.4",
-    "cross-env": "^5.2.0"
+    "cross-env": "^5.2.0",
+    "make": "^0.8.1",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-import": "^2.17.2",
+    "npmignore": "^0.2.0"
   }
 }

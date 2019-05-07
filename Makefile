@@ -11,13 +11,13 @@ calc:
 	npx babel-node -- src/bin/braincalc.js
 
 gsd:
-    npx babel-node -- src/bin/braingsd.js
+	npx babel-node -- src/bin/braingsd.js
 
 progression:
-    npx babel-node -- src/bin/brainprogression.js
+	npx babel-node -- src/bin/brainprogression.js
 
 prime:
-    npx babel-node -- src/bin/brainprime.js
+	npx babel-node -- src/bin/brainprime.js
 	
 publish: 
 	npm publish
