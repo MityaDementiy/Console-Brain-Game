@@ -27,10 +27,11 @@ const findMissedNum = () => {
   const beforeMissedNum = progression[substituteInProgression - 1];
   const afterMissedNum = progression[substituteInProgression + 1];
   let correctAnswer;
-  if (substituteInProgression === 1) {
+  if (substituteInProgression === 0) {
     correctAnswer = afterMissedNum - 2;
+  } else {
+    correctAnswer = beforeMissedNum + 2;
   }
-  correctAnswer = beforeMissedNum + 2;
   const gameData = [question, correctAnswer.toString()];
   return gameData;
 };
