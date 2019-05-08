@@ -1,17 +1,17 @@
+import playRound from '..';
+import getRandom from '../utils';
+
 console.log('Welcome to the Brain Games!');
 console.log('What number is missing in the progression?');
 
-const getRandom = () => Math.round(Math.random() * (80 - 1) + 1);
-const getRandomForProgression = () => Math.round(Math.random() * (10 - 1));
-
 const findMissedNum = () => {
-  const firstNumInProgression = getRandom();
+  const firstNumInProgression = getRandom(80, 1);
   const progression = [];
   progression.push(firstNumInProgression);
   for (let i = progression[0] + 2; i < progression[0] + 20; i += 2) {
     progression.push(i);
   }
-  const substituteInProgression = getRandomForProgression();
+  const substituteInProgression = getRandom(9, 0);
   progression[substituteInProgression] = '..';
   const firstNum = progression[0];
   const secondNum = progression[1];
@@ -35,4 +35,5 @@ const findMissedNum = () => {
   const gameData = [question, correctAnswer.toString()];
   return gameData;
 };
-export default findMissedNum;
+const gameProgression = () => playRound(findMissedNum);
+export default gameProgression;

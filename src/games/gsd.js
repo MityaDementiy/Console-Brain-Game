@@ -1,3 +1,6 @@
+import playRound from '..';
+import getRandom from '../utils';
+
 console.log('Welcome to the Brain Games!');
 console.log('Find the greatest common divisor of given numbers.');
 
@@ -15,12 +18,12 @@ const defineGsd = (a, b) => {
 };
 
 const findGsd = () => {
-  const getRandom = () => Math.round(Math.random() * (100 - 1) + 1);
-  const firstRandomNum = getRandom();
-  const secondRandomNum = getRandom();
+  const firstRandomNum = getRandom(100, 1);
+  const secondRandomNum = getRandom(100, 1);
   const question = `${firstRandomNum} ${secondRandomNum}`;
   const correctAnswer = defineGsd(firstRandomNum, secondRandomNum);
   const gameData = [question, correctAnswer.toString()];
   return gameData;
 };
-export default findGsd;
+const gameGsd = () => playRound(findGsd);
+export default gameGsd;

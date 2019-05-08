@@ -1,14 +1,14 @@
 {
   "name": "console-brain-game",
-  "version": "1.6.3",
+  "version": "1.6.4",
   "description": "This is The Brain Games project.",
   "bin": {
-    "console-brain-game": "dist/bin/brain-games.js",
-    "brain-even": "dist/bin/braineven.js",
-    "brain-calc": "dist/bin/braincalc.js",
-    "brain-gsd": "dist/bin/braingsd.js",
-    "brain-progression": "dist/bin/brainprogression.js",
-    "brain-prime": "dist/bin/brainprime.js"
+    "console-brain-game": "dist/bin/braing-games.js",
+    "brain-even": "dist/bin/braing-even.js",
+    "brain-calc": "dist/bin/braing-calc.js",
+    "brain-gcd": "dist/bin/braing-gcd.js",
+    "brain-progression": "dist/bin/braing-progression.js",
+    "brain-prime": "dist/bin/braing-prime.js"
   },
   "files": [
     "dist"

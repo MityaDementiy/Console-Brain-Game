@@ -1,28 +1,23 @@
 import readlineSync from 'readline-sync';
 
-let correctAnswersCounter = 0;
 const getName = readlineSync.question('May I have your name? ');
 console.log(`Hello, ${getName}!`);
 
-const playRound = (func) => {
-  if (correctAnswersCounter === 3) {
+const playRound = (func, correctAnswersCounter = 0) => {
+  const maxRoundPlayed = 3;
+  if (correctAnswersCounter === maxRoundPlayed) {
     console.log(`Congratulations, ${getName}, you passed this round!`);
     return;
   }
-  const gameInfo = func();
-  const question = gameInfo[0];
-  const correctAnswer = gameInfo[1];
+  const [question, correctAnswer] = func();
   console.log(`Question: ${question}`);
   const answer = readlineSync.question('Your answer: ');
   if (answer !== correctAnswer) {
-    // eslint-disable-next-line no-useless-escape
-    console.log(`\'${answer}\' is wrong answer ;(. Correct answer was \'${correctAnswer}\'`);
-    // eslint-disable-next-line no-useless-escape
-    console.log(`Let\'s try again, ${getName}!`);
+    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
+    console.log(`Let's try again, ${getName}!`);
     return;
   }
   console.log('Correct!');
-  correctAnswersCounter += 1;
-  playRound(func);
+  playRound(func, correctAnswersCounter + 1);
 };
 export default playRound;

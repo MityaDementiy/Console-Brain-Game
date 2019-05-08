@@ -1,9 +1,11 @@
+import playRound from '..';
+import getRandom from '../utils';
+
 console.log('Welcome to the Brain Games!');
 console.log('Answer "yes" if given number is prime. Otherwise answer "no"');
 
 const isPrimeGame = () => {
-  const getRandom = () => Math.round(Math.random() * (100 - 1) + 1);
-  const question = getRandom();
+  const question = getRandom(100, 1);
   let correctAnswer;
   if (question < 2) {
     correctAnswer = 'no';
@@ -23,4 +25,5 @@ const isPrimeGame = () => {
   const gameData = [question, correctAnswer];
   return gameData;
 };
-export default isPrimeGame;
+const gamePrime = () => playRound(isPrimeGame);
+export default gamePrime;

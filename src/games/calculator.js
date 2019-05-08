@@ -1,34 +1,32 @@
+import playRound from '..';
+import getRandom from '../utils';
+
 console.log('Welcome to the Brain Games!');
 console.log('What is the result of the expression?');
 
 const calculate = () => {
-  const getRandom = () => Math.round(Math.random() * (100 - 1) + 1);
-  const getRandomForMathAction = () => Math.round(Math.random() * (3 - 1) + 1);
-  const firstRandomNum = getRandom();
-  const secondRandomNum = getRandom();
-  const numOfMathAction = getRandomForMathAction();
+  const firstRandomNum = getRandom(100, 1);
+  const secondRandomNum = getRandom(100, 1);
+  const numOfMathAction = getRandom(3, 1);
 
   let mathSymbol;
-
-  if (numOfMathAction === 1) {
-    mathSymbol = '+';
-  } else if (numOfMathAction === 2) {
-    mathSymbol = '-';
-  } else if (numOfMathAction === 3) {
-    mathSymbol = '*';
-  }
-
   let correctAnswer;
-
-  if (numOfMathAction === 1) {
-    correctAnswer = firstRandomNum + secondRandomNum;
-  } else if (numOfMathAction === 2) {
-    correctAnswer = firstRandomNum - secondRandomNum;
-  } else if (numOfMathAction === 3) {
-    correctAnswer = firstRandomNum * secondRandomNum;
+  switch (numOfMathAction) {
+    case 1:
+      mathSymbol = '+';
+      correctAnswer = firstRandomNum + secondRandomNum;
+      break;
+    case 2:
+      mathSymbol = '-';
+      correctAnswer = firstRandomNum - secondRandomNum;
+      break;
+    default:
+      mathSymbol = '*';
+      correctAnswer = firstRandomNum * secondRandomNum;
   }
   const question = `${firstRandomNum} ${mathSymbol} ${secondRandomNum}`;
   const gameData = [question, correctAnswer.toString()];
   return gameData;
 };
-export default calculate;
+const gameCalc = () => playRound(calculate);
+export default gameCalc;
