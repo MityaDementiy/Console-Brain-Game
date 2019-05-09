@@ -2,7 +2,7 @@ import playRound from '..';
 import getRandom from '../utils';
 
 const findMissedNum = () => {
-  const giveInstruct = () => console.log('What number is missing in the progression?');
+  const instruct = 'What number is missing in the progression?';
   const firstNumInProgression = getRandom(80, 1);
   const progression = [];
   progression.push(firstNumInProgression);
@@ -30,7 +30,7 @@ const findMissedNum = () => {
   } else {
     correctAnswer = beforeMissedNum + 2;
   }
-  const gameData = [question, correctAnswer.toString(), giveInstruct];
+  const gameData = [question, correctAnswer.toString(), instruct];
   return gameData;
 };
 const gameProgression = () => playRound(findMissedNum);

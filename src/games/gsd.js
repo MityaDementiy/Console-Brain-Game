@@ -15,12 +15,12 @@ const defineGsd = (a, b) => {
 };
 
 const findGsd = () => {
-  const giveInstruct = () => console.log('Find the greatest common divisor of given numbers.');
+  const instruct = 'Find the greatest common divisor of given numbers.';
   const firstRandomNum = getRandom(100, 1);
   const secondRandomNum = getRandom(100, 1);
   const question = `${firstRandomNum} ${secondRandomNum}`;
   const correctAnswer = defineGsd(firstRandomNum, secondRandomNum);
-  const gameData = [question, correctAnswer.toString(), giveInstruct];
+  const gameData = [question, correctAnswer.toString(), instruct];
   return gameData;
 };
 const gameGsd = () => playRound(findGsd);

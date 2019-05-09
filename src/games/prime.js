@@ -2,7 +2,7 @@ import playRound from '..';
 import getRandom from '../utils';
 
 const isPrimeGame = () => {
-  const giveInstruct = () => console.log('Answer "yes" if given number is prime. Otherwise answer "no"');
+  const instruct = 'Answer "yes" if given number is prime. Otherwise answer "no"';
   const question = getRandom(100, 1);
   let correctAnswer;
   if (question < 2) {
@@ -20,7 +20,7 @@ const isPrimeGame = () => {
       }
     }
   }
-  const gameData = [question, correctAnswer, giveInstruct];
+  const gameData = [question, correctAnswer, instruct];
   return gameData;
 };
 const gamePrime = () => playRound(isPrimeGame);
