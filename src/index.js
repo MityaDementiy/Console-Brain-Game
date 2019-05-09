@@ -1,28 +1,24 @@
 import readlineSync from 'readline-sync';
 
-const getName = readlineSync.question('May I have your name? ');
-const sayWelcome = () => console.log('Welcome to the Brain Games!');
-
-const playRound = (func, correctAnswersCounter = 0) => {
-  const [question, correctAnswer, giveInstruct] = func();
-  if (correctAnswersCounter === 0) {
-    console.log(`Hello, ${getName}!`);
-    sayWelcome();
-    giveInstruct();
-  }
+const playRound = (func) => {
+  const [,, giveInstruct] = func();
+  const sayWelcome = () => console.log('Welcome to the Brain Games!');
+  sayWelcome();
+  giveInstruct();
+  const getName = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${getName}!`);
   const maxRoundPlayed = 3;
-  if (correctAnswersCounter === maxRoundPlayed) {
-    console.log(`Congratulations, ${getName}, you passed this round!`);
-    return;
+  for (let i = 0; i < maxRoundPlayed; i += 1) {
+    const [question, correctAnswer] = func();
+    console.log(`Question: ${question}`);
+    const answer = readlineSync.question('Your answer: ');
+    if (answer !== correctAnswer) {
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
+      console.log(`Let's try again, ${getName}!`);
+      return;
+    }
+    console.log('Correct!');
   }
-  console.log(`Question: ${question}`);
-  const answer = readlineSync.question('Your answer: ');
-  if (answer !== correctAnswer) {
-    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
-    console.log(`Let's try again, ${getName}!`);
-    return;
-  }
-  console.log('Correct!');
-  playRound(func, correctAnswersCounter + 1);
+  console.log(`Congratulations, ${getName}, you passed this round!`);
 };
 export default playRound;
