@@ -1,15 +1,20 @@
 import readlineSync from 'readline-sync';
 
 const getName = readlineSync.question('May I have your name? ');
-console.log(`Hello, ${getName}!`);
+const sayWelcome = () => console.log('Welcome to the Brain Games!');
 
 const playRound = (func, correctAnswersCounter = 0) => {
+  const [question, correctAnswer, giveInstruct] = func();
+  if (correctAnswersCounter === 0) {
+    console.log(`Hello, ${getName}!`);
+    sayWelcome();
+    giveInstruct();
+  }
   const maxRoundPlayed = 3;
   if (correctAnswersCounter === maxRoundPlayed) {
     console.log(`Congratulations, ${getName}, you passed this round!`);
     return;
   }
-  const [question, correctAnswer] = func();
   console.log(`Question: ${question}`);
   const answer = readlineSync.question('Your answer: ');
   if (answer !== correctAnswer) {
