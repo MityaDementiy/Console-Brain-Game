@@ -1,27 +1,25 @@
 import playRound from '..';
 import getRandom from '../utils';
 
-const isPrimeGame = () => {
-  const instruct = 'Answer "yes" if given number is prime. Otherwise answer "no"';
-  const question = getRandom(100, 1);
-  let correctAnswer;
-  if (question < 2) {
-    correctAnswer = 'no';
-  } else if (question === 2) {
-    correctAnswer = 'yes';
-  } else {
-    for (let i = question - 1; i >= 2; i -= 1) {
-      const rest = question % i;
-      if (rest === 0) {
-        correctAnswer = 'no';
-        break;
-      } else {
-        correctAnswer = 'yes';
-      }
+const instruct = 'Answer "yes" if given number is prime. Otherwise answer "no"';
+
+const isPrime = (number) => {
+  if (number < 2) {
+    return false;
+  }
+  for (let i = 2; i < number; i += 1) {
+    if (number % i === 0) {
+      return false;
     }
   }
-  const gameData = [question, correctAnswer, instruct];
+  return true;
+};
+
+const isPrimeGame = () => {
+  const question = getRandom(100, 1);
+  const correctAnswer = (isPrime(question) === true) ? 'yes' : 'no';
+  const gameData = [question, correctAnswer];
   return gameData;
 };
-const gamePrime = () => playRound(isPrimeGame);
+const gamePrime = () => playRound(isPrimeGame, instruct);
 export default gamePrime;

@@ -1,15 +1,15 @@
 import readlineSync from 'readline-sync';
 
-const playRound = (func) => {
-  const [,, instruct] = func();
-  const sayWelcome = () => console.log('Welcome to the Brain Games!');
+const maxRoundPlayed = 3;
+const sayWelcome = () => console.log('Welcome to the Brain Games!');
+
+const playRound = (game, instruct) => {
   sayWelcome();
   console.log(instruct);
   const getName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${getName}!`);
-  const maxRoundPlayed = 3;
   for (let i = 0; i < maxRoundPlayed; i += 1) {
-    const [question, correctAnswer] = func();
+    const [question, correctAnswer] = game();
     console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
     if (answer !== correctAnswer) {

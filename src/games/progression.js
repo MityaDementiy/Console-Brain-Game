@@ -1,8 +1,9 @@
 import playRound from '..';
 import getRandom from '../utils';
 
+const instruct = 'What number is missing in the progression?';
+
 const findMissedNum = () => {
-  const instruct = 'What number is missing in the progression?';
   const firstNumInProgression = getRandom(80, 1);
   const progression = [];
   progression.push(firstNumInProgression);
@@ -11,17 +12,10 @@ const findMissedNum = () => {
   }
   const substituteInProgression = getRandom(9, 0);
   progression[substituteInProgression] = '..';
-  const firstNum = progression[0];
-  const secondNum = progression[1];
-  const thirdNum = progression[2];
-  const fourthNum = progression[3];
-  const fifthNum = progression[4];
-  const sixthNum = progression[5];
-  const seventhNum = progression[6];
-  const eightNum = progression[7];
-  const ninethNum = progression[8];
-  const tenthNum = progression[9];
-  const question = `${firstNum} ${secondNum} ${thirdNum} ${fourthNum} ${fifthNum} ${sixthNum} ${seventhNum} ${eightNum} ${ninethNum} ${tenthNum}`;
+  let question = '';
+  for (let i = 0; i < progression.length; i += 1) {
+    question = `${question} ${progression[i]}`;
+  }
   const beforeMissedNum = progression[substituteInProgression - 1];
   const afterMissedNum = progression[substituteInProgression + 1];
   let correctAnswer;
@@ -30,8 +24,8 @@ const findMissedNum = () => {
   } else {
     correctAnswer = beforeMissedNum + 2;
   }
-  const gameData = [question, correctAnswer.toString(), instruct];
+  const gameData = [question, correctAnswer.toString()];
   return gameData;
 };
-const gameProgression = () => playRound(findMissedNum);
+const gameProgression = () => playRound(findMissedNum, instruct);
 export default gameProgression;
