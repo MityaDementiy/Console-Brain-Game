@@ -1,7 +1,7 @@
 import playRound from '..';
 import getRandom from '../utils';
 
-const instruct = 'Find the greatest common divisor of given numbers.';
+const instruction = 'Find the greatest common divisor of given numbers.';
 
 const defineGsd = (a, b) => {
   let x = a;
@@ -16,7 +16,7 @@ const defineGsd = (a, b) => {
   return x;
 };
 
-const findGsd = () => {
+const findGcd = () => {
   const firstRandomNum = getRandom(100, 1);
   const secondRandomNum = getRandom(100, 1);
   const question = `${firstRandomNum} ${secondRandomNum}`;
@@ -24,5 +24,5 @@ const findGsd = () => {
   const gameData = [question, correctAnswer.toString()];
   return gameData;
 };
-const gameGsd = () => playRound(findGsd, instruct);
-export default gameGsd;
+const gameGcd = () => playRound(findGcd, instruction);
+export default gameGcd;

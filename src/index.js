@@ -3,9 +3,9 @@ import readlineSync from 'readline-sync';
 const maxRoundPlayed = 3;
 const sayWelcome = () => console.log('Welcome to the Brain Games!');
 
-const playRound = (game, instruct) => {
+const playRound = (game, instruction) => {
   sayWelcome();
-  console.log(instruct);
+  console.log(instruction);
   const getName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${getName}!`);
   for (let i = 0; i < maxRoundPlayed; i += 1) {

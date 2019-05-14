@@ -1,7 +1,7 @@
 import playRound from '..';
 import getRandom from '../utils';
 
-const instruct = 'What is the result of the expression?';
+const instruction = 'What is the result of the expression?';
 
 const calculate = () => {
   const firstRandomNum = getRandom(100, 1);
@@ -27,5 +27,5 @@ const calculate = () => {
   const gameData = [question, correctAnswer.toString()];
   return gameData;
 };
-const gameCalc = () => playRound(calculate, instruct);
+const gameCalc = () => playRound(calculate, instruction);
 export default gameCalc;
