@@ -3,7 +3,7 @@ import getRandom from '../utils';
 
 const instruction = 'Find the greatest common divisor of given numbers.';
 
-const defineGsd = (a, b) => {
+const defineGcd = (a, b) => {
   let x = a;
   let y = b;
   while (x !== y) {
@@ -16,13 +16,12 @@ const defineGsd = (a, b) => {
   return x;
 };
 
-const findGcd = () => {
+const playGcd = () => {
   const firstRandomNum = getRandom(100, 1);
   const secondRandomNum = getRandom(100, 1);
   const question = `${firstRandomNum} ${secondRandomNum}`;
-  const correctAnswer = defineGsd(firstRandomNum, secondRandomNum);
+  const correctAnswer = defineGcd(firstRandomNum, secondRandomNum);
   const gameData = [question, correctAnswer.toString()];
   return gameData;
 };
-const gameGcd = () => playRound(findGcd, instruction);
-export default gameGcd;
+export default () => playRound(playGcd, instruction);

@@ -3,12 +3,7 @@ import getRandom from '../utils';
 
 const instruction = 'Answer "yes" if number even otherwise answer "no".';
 
-const isEven = (num) => {
-  if (num % 2 === 0) {
-    return true;
-  }
-  return false;
-};
+const isEven = num => num % 2 === 0;
 
 const playEven = () => {
   const question = getRandom(100, 1);
@@ -16,5 +11,4 @@ const playEven = () => {
   const gameData = [question, correctAnswer];
   return gameData;
 };
-const gameEven = () => playRound(playEven, instruction);
-export default gameEven;
+export default () => playRound(playEven, instruction);

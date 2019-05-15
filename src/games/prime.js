@@ -16,11 +16,10 @@ const isPrime = (number) => {
   return true;
 };
 
-const isPrimeGame = () => {
+const playPrime = () => {
   const question = getRandom(100, 1);
   const correctAnswer = (isPrime(question)) ? 'yes' : 'no';
   const gameData = [question, correctAnswer];
   return gameData;
 };
-const gamePrime = () => playRound(isPrimeGame, instruction);
-export default gamePrime;
+export default () => playRound(playPrime, instruction);

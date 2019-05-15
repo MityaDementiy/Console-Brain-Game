@@ -3,7 +3,7 @@ import getRandom from '../utils';
 
 const instruction = 'What is the result of the expression?';
 
-const calculate = () => {
+const playCalc = () => {
   const firstRandomNum = getRandom(100, 1);
   const secondRandomNum = getRandom(100, 1);
   const numOfMathAction = getRandom(3, 1);
@@ -27,5 +27,4 @@ const calculate = () => {
   const gameData = [question, correctAnswer.toString()];
   return gameData;
 };
-const gameCalc = () => playRound(calculate, instruction);
-export default gameCalc;
+export default () => playRound(playCalc, instruction);
