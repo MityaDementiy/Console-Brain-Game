@@ -1,10 +1,24 @@
-# project-lvl1-s486
+Console Brain Game
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
 
 [![Build Status](https://travis-ci.org/MityaDementiy/project-lvl1-s486.svg?branch=master)](https://travis-ci.org/MityaDementiy/project-lvl1-s486)
 
-This is The Brain Games project by Dmitriy Dementiy and Hexlet/Это проект Brain Games, который я выполняю под крылом Hexlet.
+To play Console Brain Game, you need to install it:
+
+npm install -g console-brain-game (or sudo npm install -g console-brain-game for Linux)
+
+NB! Node.js should be installed on your PC.
+
+To play games type commands in terminal:
+
+brain-even
+brain-calc
+brain-prime
+brain-progression
+brain-gcd
+
+Then follow the instruction.
 
 This is Brain even set up and play demo:
 
